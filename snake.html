@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+    <div id="welcome-screen">
+        <h1>Welcome to the Snake Game!</h1>
+        <p>Enter Your Name:</p>
+        <input type="text" id="player-name" placeholder="Enter your name">
+        <button id="start-game-btn">Start Game</button>
+        <p id="error-message" style="color:red;"></p>
+    </div>
+    <div id="game-screen" class="hidden">
+        <canvas id="gameCanvas" width="250" height="250"></canvas>
+        <div id="game-over-screen" class="hidden">
+            <h2 id="compliment-message"></h2>
+            <button onclick="restartGame()">Restart Game</button>
+            <button onclick="window.location.href='snake.html'">Reset Game</button>
+        </div>
+    </div>
+    <button onclick="window.location.href='index.html'"> Return Back To Main</button>
+    <script src="snake.js"></script>
+</body>
+</html>
