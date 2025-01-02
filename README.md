@@ -20,5 +20,5 @@ Feel free to explore, contribute, and have fun! 🚀
 - Simple, intuitive, and user-friendly interface  
 - Responsive design for a smooth experience across devices  
 - Classic games with modern aesthetics
-- 
+
 Happy coding! ❤️
