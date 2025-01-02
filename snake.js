@@ -16,7 +16,7 @@ let score = 0;
 let gameInterval;
 let isGameOver = false;
 
-const validNames = ["Junaid Nazar", "JUNAID NAZAR", "junaid nazar"];
+const validNames = ["Junaid Nazar", "JUNAID NAZAR", "junaid nazar", "junaid"];
 const compliments = [
     "Mr. Junaid Nazar, you are an inspiration to everyone around you!",
     "Your wisdom and guidance have truly shaped the minds of your students, Mr. Junaid Nazar.",
