@@ -15,6 +15,7 @@ let food = { x: 15, y: 15 };
 let score = 0;
 let gameInterval;
 let isGameOver = false;
+let gameSpeed = 200;
 
 const validNames = ["Junaid Nazar", "JUNAID NAZAR", "junaid nazar", "junaid"];
 const compliments = [
@@ -48,8 +49,15 @@ function startGameLogic() {
     snakeLength = 1;
     score = 0;
     direction = 'RIGHT';
-    gameInterval = setInterval(gameLoop, 100);
+    gameSpeed = 200; // Reset speed to initial value
+    startGameInterval();
 }
+
+function startGameInterval() {
+    clearInterval(gameInterval); // Clear any existing interval
+    gameInterval = setInterval(gameLoop, gameSpeed);
+}
+
 function gameLoop() {
     if (isGameOver) return;
     moveSnake();
@@ -96,10 +104,16 @@ function eatFood() {
     let head = snake[0];
     if (head.x === food.x && head.y === food.y) {
         snakeLength++;
+        increaseSpeed(); // Increase speed when food is eaten
         return true;
     }
     return false;
 }
+function increaseSpeed() {
+    gameSpeed = Math.max(50, gameSpeed * 0.75); // Increase speed by 25% (lower interval time)
+    startGameInterval(); // Restart the game loop with the new speed
+}
+
 function generateFood() {
     food = {
         x: Math.floor(Math.random() * (canvas.width / 10)),
