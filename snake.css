@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button{
+    background: linear-gradient(135deg, #1d1d1d, #333333);
+    margin: 20px;
+    color: white;
+    padding: 20px;
+    width: max-contents;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.7);
+}
+
+#game-screen.hidden, #game-over-screen.hidden {
+    display: none;
+}
+#gameCanvas {
+    background-color: #222;
+}
+#game-over-screen {
+    text-align: left;
+}
+#game-over-screen button {
+    margin-top: 20px;
+    padding: 20px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#start-game-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#player-name {
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#player-score {
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+}
