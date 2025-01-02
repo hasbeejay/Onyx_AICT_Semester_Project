@@ -110,7 +110,7 @@ function eatFood() {
     return false;
 }
 function increaseSpeed() {
-    gameSpeed = Math.max(50, gameSpeed * 0.75); // Increase speed by 25% (lower interval time)
+    gameSpeed = Math.max(50, gameSpeed * 0.90); 
     startGameInterval(); // Restart the game loop with the new speed
 }
 
